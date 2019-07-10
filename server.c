@@ -257,11 +257,6 @@ void server_serv_client(void *data)
     rbuf_size  = sizeof(rbuf);
     wbuf_size  = sizeof(wbuf);
     l_og(e_log_level_debug, "reading fd: %d\n", conn->socket);
-    if(NULL == rbuf)
-    {
-        l_og_error("");
-        return;
-    }
     if(conn->data_len > 0)
     {
         memcpy(rbuf, conn->data_buffer, conn->data_len);
