@@ -24,7 +24,7 @@ typedef struct http_url_path_seg
 }http_url_path_seg_t;
 typedef struct url_path_info
 {
-    stack_t path_stack;
+    o_stack_t path_stack;
     char *data;
     int data_len;
 }http_url_path_info_t;

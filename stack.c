@@ -2,7 +2,7 @@
 
 #include "stack.h"
 
-stack_node_t *stack_pop(stack_t *stack)
+stack_node_t *stack_pop(o_stack_t *stack)
 {
     if(stack_empty(stack))
     {
@@ -13,7 +13,7 @@ stack_node_t *stack_pop(stack_t *stack)
     stack->head.prev = node->prev;
     return node;
 }
-stack_node_t *stack_top(stack_t *stack)
+stack_node_t *stack_top(o_stack_t *stack)
 {
     if(stack_empty(stack))
     {
